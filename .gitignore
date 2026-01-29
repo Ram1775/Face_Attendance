@@ -1,0 +1,13 @@
+# Ignore face images (privacy)
+faces/*
+!faces/.gitkeep
+
+# Ignore attendance logs
+data/attendance.csv
+
+# Python cache
+__pycache__/
+*.pyc
+
+# Virtual environments
+venv/
