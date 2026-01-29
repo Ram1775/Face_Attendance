@@ -1,40 +1,25 @@
 # Face Authentication Attendance System
 
 ## Overview
-This project implements a real-time face authentication system for attendance marking.
-It supports face registration, authentication, punch-in, punch-out, and basic spoof prevention.
+A GUI-based face authentication attendance system using OpenCV and LBPH.
+The system performs real-time face recognition and automatically marks
+punch-in and punch-out without any terminal interaction.
+
+## Features
+- Face registration through GUI
+- Real-time face authentication
+- Automatic punch-in / punch-out
+- Unknown face rejection
+- Auto-exit after attendance
+- Offline and lightweight
 
 ## Technologies Used
-- OpenCV (camera handling)
-- Face Recognition (dlib / FaceNet embeddings)
 - Python
-- CSV for attendance storage
-
-## Model and Approach
-- Pre-trained FaceNet embeddings are used.
-- Faces are converted into 128-D feature vectors.
-- Euclidean distance is used for matching.
-- Threshold = 0.6
-
-## Training Process
-- No training from scratch.
-- User registers face using webcam.
-- Face embeddings are stored locally.
-
-## Spoof Prevention
-- Eye blink detection
-- Motion consistency across frames
-
-## Accuracy Expectations
-- Good lighting: ~95%
-- Low lighting: ~80%
-- Occlusion: Reduced accuracy
-
-## Known Failure Cases
-- Identical twins
-- Poor lighting
-- Masked faces
-- Printed photo with fake motion
+- OpenCV
+- Tkinter
+- LBPH Face Recognizer
 
 ## How to Run
-1. Register Face:
+```bash
+pip install opencv-python opencv-contrib-python pillow numpy pandas
+python app_gui.py
